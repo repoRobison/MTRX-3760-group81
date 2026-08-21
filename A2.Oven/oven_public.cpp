@@ -17,7 +17,7 @@ class COven
 {
   public:
     std::string mName;       // the oven's label, e.g. "Reflow oven"
-    int mTemperatureTenthsC; // current temperature, in tenths of a degree C
+    int mTemperatureTenthsC; // current temperature, in tenths of a degree Celsius
 };
 
 //---main----------------------------------------------------------------------
@@ -28,11 +28,11 @@ int main()
 {
   COven ReflowOven;
   ReflowOven.mName = "Reflow oven";
-  ReflowOven.mTemperatureTenthsC = 200;     // start at 20.0 degrees C
+  ReflowOven.mTemperatureTenthsC = 200;     // start at 20.0 degrees Celsius
 
   COven CuringOven;
   CuringOven.mName = "Curing oven";
-  CuringOven.mTemperatureTenthsC = 200;     // start at 20.0 degrees C
+  CuringOven.mTemperatureTenthsC = 200;     // start at 20.0 degrees Celsius
 
   for( int i = 0; i < 5; ++i )
   {
@@ -44,12 +44,12 @@ int main()
     CuringOven.mTemperatureTenthsC += 10;   // warm up by one degree
   }
 
-  if( ReflowOven.mTemperatureTenthsC >= 2500 ) // limit is 250.0 degrees C
+  if( ReflowOven.mTemperatureTenthsC >= 2500 ) // limit is 250.0 degrees Celsius
   {
     std::cout << "Warning: oven is overheating!" << std::endl;
   }
 
-  if( CuringOven.mTemperatureTenthsC >= 2500 ) // limit is 250.0 degrees C
+  if( CuringOven.mTemperatureTenthsC >= 2500 ) // limit is 250.0 degrees Celsius
   {
     std::cout << "Warning: oven is overheating!" << std::endl;
   }

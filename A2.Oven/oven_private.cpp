@@ -30,7 +30,7 @@ class COven
 
   private:
     std::string mName;       // the oven's label, e.g. "Reflow oven"
-    int mTemperatureTenthsC; // current temperature, in tenths of a degree C
+    int mTemperatureTenthsC; // current temperature, in tenths of a degree Celsius
 };
 
 //---main----------------------------------------------------------------------
@@ -42,24 +42,16 @@ int main()
   COven CuringOven( "Curing oven" );
 
   for( int i = 0; i < 5; ++i )
-  {
     ReflowOven.WarmUp();
-  }
 
   for( int i = 0; i < 8; ++i )
-  {
     CuringOven.WarmUp();
-  }
 
   if( ReflowOven.IsOverheating() )
-  {
     std::cout << "Warning: oven is overheating!" << std::endl;
-  }
 
   if( CuringOven.IsOverheating() )
-  {
     std::cout << "Warning: oven is overheating!" << std::endl;
-  }
 
   ReflowOven.Report();
   CuringOven.Report();
@@ -70,7 +62,7 @@ int main()
 //---COven Implementation------------------------------------------------------
 COven::COven( const std::string& aName )
   : mName( aName ),
-    mTemperatureTenthsC( 200 )          // start at 20.0 degrees C
+    mTemperatureTenthsC( 200 )          // start at 20.0 degrees Celsius
 {
 }
 //---
@@ -81,11 +73,10 @@ void COven::WarmUp()
 //---
 bool COven::IsOverheating()
 {
-  return mTemperatureTenthsC >= 2500;   // overheating limit is 250.0 C
+  return mTemperatureTenthsC >= 2500;   // overheating limit is 250.0 Celsius
 }
 //---
 void COven::Report()
 {
-  std::cout << mName << " is at "
-            << mTemperatureTenthsC / 10 << "C" << std::endl;
+  std::cout << mName << " is at "<< mTemperatureTenthsC / 10 << "C" << std::endl;
 }
