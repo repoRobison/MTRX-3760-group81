@@ -78,18 +78,19 @@ class CMotor
 class CBattery
 {
   public:
-    // Creates a fully charged battery
-    CBattery();
 
-    // Update consumes 1 cycle's charge.
-    void Update();
+  // Starts the battery fully charged.
+  CBattery();
 
-    // Returns the speed permitted by the current charge.
-    double GetBaseSpeed();
+  // Uses some battery charge each cycle.
+  void Update();
 
-    // Prints the remaining charge.
-    void Report();
+  // Gets the speed based on the current battery charge.
+  double GetBaseSpeed();
 
+  // Prints the battery charge left.
+  void Report();
+  
   private:
     int mCharge;            // remaining charge, from 0 to 100 percent
 };

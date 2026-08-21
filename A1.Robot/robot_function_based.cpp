@@ -154,7 +154,7 @@ void SetMotorSpeed( SMotor* apMotor, double aSpeed )
 }
 
 //---ConsumeCharge-------------------------------------------------------------
-// Uses one cycle's charge without allowing the stored charge to become negative.
+// Uses some battery charge each cycle and keeps it above 0.
 void ConsumeCharge( SBattery* apBattery )
 {
   apBattery->charge -= ChargePerCycle;
@@ -166,7 +166,7 @@ void ConsumeCharge( SBattery* apBattery )
 }
 
 //---SelectBaseSpeed-----------------------------------------------------------
-// Returns the forward speed permitted by the current battery charge.
+// Gets the forward speed based on the current battery charge.
 double SelectBaseSpeed( SBattery* apBattery )
 {
   double speed = BaseSpeed;

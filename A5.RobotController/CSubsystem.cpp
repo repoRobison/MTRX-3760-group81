@@ -1,5 +1,5 @@
 // CSubsystem.cpp
-// Implementation of the common robot subsystem interface.
+// Code for the common subsystem interface.
 
 #include "CSubsystem.h"
 

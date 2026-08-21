@@ -1,5 +1,5 @@
 // CRobotController.cpp
-// Implementation of the extensible robot controller.
+// Code for the robot controller.
 
 #include "CRobotController.h"
 

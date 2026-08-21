@@ -1,5 +1,5 @@
 // tests.cpp
-// Simple state tests for the two concrete subsystem classes.
+// Tests the motor, line detector, and robot controller.
 
 #include "CDriveMotor.h"
 #include "CLineDetector.h"

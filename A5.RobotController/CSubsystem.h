@@ -1,28 +1,28 @@
 // CSubsystem.h
-// Common interface for every subsystem managed by the robot controller.
+// Common interface for all robot subsystems.
 
 #ifndef CSUBSYSTEM_H
 #define CSUBSYSTEM_H
 
 #include <string>
 
-// CSubsystem defines the operations every robot subsystem must provide.
+// CSubsystem shows what every subsystem needs to provide.
 class CSubsystem
 {
   public:
-    // Creates a subsystem with the given display name.
+    // Creates a subsystem with the given name.
     CSubsystem( const std::string& aName );
 
-    // Allows derived objects to be destroyed safely through a base pointer.
+    // Allows subclasses to be deleted safely through CSubsystem pointers.
     virtual ~CSubsystem();
 
-    // Update advances the subsystem by one controller cycle.
+    // Updates the subsystem for one cycle.
     virtual void Update() = 0;
 
-    // Report prints the subsystem's current state.
+    // Prints the current state of the subsystem.
     virtual void Report() = 0;
 
-    // GetName returns the subsystem's display name.
+    // Gets the subsystem name.
     const std::string& GetName();
 
   private:

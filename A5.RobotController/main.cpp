@@ -1,5 +1,5 @@
 // main.cpp
-// Demonstrates a controller running different robot subsystem types.
+// Runs the robot controller with different types of subsystems.
 
 #include "CDriveMotor.h"
 #include "CLineDetector.h"

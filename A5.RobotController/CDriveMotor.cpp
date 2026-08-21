@@ -1,5 +1,5 @@
 // CDriveMotor.cpp
-// Implementation of the drive-motor subsystem.
+// Code for the drive motor subsystem.
 
 #include "CDriveMotor.h"
 

@@ -1,5 +1,5 @@
 // CLineDetector.cpp
-// Implementation of the line-detector subsystem.
+// Code for the line detector subsystem.
 
 #include "CLineDetector.h"
 

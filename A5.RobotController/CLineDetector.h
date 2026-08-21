@@ -1,25 +1,25 @@
 // CLineDetector.h
-// Line-detector subsystem with a changing error reading.
+// Line detector subsystem that keeps track of the current line error.
 
 #ifndef CLINEDETECTOR_H
 #define CLINEDETECTOR_H
 
 #include "CSubsystem.h"
 
-// CLineDetector is a subsystem that produces successive track-error readings.
+// CLineDetector reads line errors from the simulated track.
 class CLineDetector : public CSubsystem
 {
   public:
-    // Creates a detector before its first reading.
+    // Starts the detector before the first reading.
     CLineDetector( const std::string& aName );
 
-    // Update reads the next line error from the simulated track.
+    // Reads the next line error.
     void Update();
 
-    // Report prints the current line error.
+    // Prints the current line error.
     void Report();
 
-    // GetError supports verification of the detector state.
+    // Gets the current line error.
     int GetError();
 
   private:

@@ -1,22 +1,22 @@
 // CRobotController.h
-// Controller that updates and reports a collection of robot subsystems.
+// Robot controller that runs and reports the subsystems.
 
 #ifndef CROBOTCONTROLLER_H
 #define CROBOTCONTROLLER_H
 
 #include "CSubsystem.h"
 
-// CRobotController manages subsystems only through the CSubsystem interface.
+// CRobotController manages the subsystems through CSubsystem.
 class CRobotController
 {
   public:
-    // Creates an empty controller before its first cycle.
+    // Starts the controller with no subsystems.
     CRobotController();
 
-    // AddSubsystem registers one subsystem and reports whether it was accepted.
+    // Adds a subsystem to the controller.
     bool AddSubsystem( CSubsystem* apSubsystem );
 
-    // RunCycle updates and reports every registered subsystem.
+    // Updates and reports all added subsystems.
     void RunCycle();
 
   private:

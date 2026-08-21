@@ -1,28 +1,28 @@
 // CDriveMotor.h
-// Drive-motor subsystem with changing speed state.
+// Drive motor subsystem that keeps track of its current and target speed.
 
 #ifndef CDRIVEMOTOR_H
 #define CDRIVEMOTOR_H
 
 #include "CSubsystem.h"
 
-// CDriveMotor is a subsystem that approaches a requested target speed.
+// CDriveMotor controls a drive motor and moves its speed towards a target.
 class CDriveMotor : public CSubsystem
 {
   public:
-    // Creates a stopped drive motor.
+    // Starts the drive motor stopped.
     CDriveMotor( const std::string& aName );
 
-    // SetTargetSpeed sets the requested speed from 0 to 100.
+    // Sets the target speed from 0 to 100.
     void SetTargetSpeed( int aTargetSpeed );
 
-    // Update moves the current speed towards the target by one step.
+    // Moves the current speed towards the target.
     void Update();
 
-    // Report prints the current and target speeds.
+    // Prints the current speed and target speed.
     void Report();
 
-    // GetSpeed supports verification of the motor state.
+    // Gets the current motor speed.
     int GetSpeed();
 
   private:
