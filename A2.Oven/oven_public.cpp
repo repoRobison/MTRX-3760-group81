@@ -35,10 +35,10 @@ int main()
   CuringOven.mTemperatureTenthsC = 200;     // start at 20.0 degrees Celsius
 
   for( int i = 0; i < 5; ++i )
-    ReflowOven.mTemperatureTenthsC += 10.0;   // warm up by one degree
+    ReflowOven.mTemperatureTenthsC += 10;   // warm up by one degree
 
   for( int i = 0; i < 8; ++i )
-    CuringOven.mTemperatureTenthsC += 10.0;   // warm up by one degree
+    CuringOven.mTemperatureTenthsC += 10;   // warm up by one degree
 
   if( ReflowOven.mTemperatureTenthsC >= 2500 ) // limit is 250.0 degrees Celsius
     std::cout << "Warning: oven is overheating!" << std::endl;
@@ -47,10 +47,10 @@ int main()
     std::cout << "Warning: oven is overheating!" << std::endl;
 
   std::cout << ReflowOven.mName << " is at "
-            << ReflowOven.mTemperatureTenthsC / 10 << "C" << std::endl;
+            << ReflowOven.mTemperatureTenthsC / 10.0 << "C" << std::endl;
 
   std::cout << CuringOven.mName << " is at "
-            << CuringOven.mTemperatureTenthsC / 10 << "C" << std::endl;
+            << CuringOven.mTemperatureTenthsC / 10.0 << "C" << std::endl;
 
   return 0;
 }
